@@ -1,3 +1,5 @@
+# 00_journalist.rb
+
 liste_twitter = ["@jcunniet", "@PaulLampon", "@Aziliz31", "@ssoumier", "@marionsouzeau", "@gaellombart", "@bendarag", "@AurelieLebelle", "@julienduffe", "@thomaspoupeau", ...] # Ton array de handles complet ici
 
 def nombre_de_handles(liste_twitter)
