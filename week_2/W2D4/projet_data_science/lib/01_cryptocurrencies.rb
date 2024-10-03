@@ -14,14 +14,14 @@ end
 def max_value_crypto(crypto_hash)
   max_value = crypto_hash.values.max
   crypto_hash.each do |name, price|
-    return [max_value, name] if price == max_value
+    return {name: name, price: max_value} if price == max_value
   end
 end
 
 def min_value_crypto(crypto_hash)
   min_value = crypto_hash.values.min
   crypto_hash.each do |name, price|
-    return [min_value, name] if price == min_value
+    return {name: name, price: min_value} if price == min_value
   end
 end
 
@@ -33,20 +33,20 @@ def most_expensive_below_6000(crypto_hash)
   below_6000 = cryptos_below_6000(crypto_hash)
   max_price = below_6000.values.max
   below_6000.each do |name, price|
-    return [name, max_price] if price == max_price
+    return {name: name, price: max_price} if price == max_price
   end
 end
 
 crypto_hash = create_crypto_hash(crypto_names, crypto_prices)
 
 max_crypto = max_value_crypto(crypto_hash)
-puts "La crypto-monnaie avec la plus grande valeur est #{max_crypto[1]} avec un prix de #{max_crypto[0]}."
+puts "La crypto-monnaie avec la plus grande valeur est #{max_crypto[:name]} avec un prix de #{max_crypto[:price]}."
 
 min_crypto = min_value_crypto(crypto_hash)
-puts "La crypto-monnaie avec la plus petite valeur est #{min_crypto[1]} avec un prix de #{min_crypto[0]}."
+puts "La crypto-monnaie avec la plus petite valeur est #{min_crypto[:name]} avec un prix de #{min_crypto[:price]}."
 
 puts "Les devises dont le cours est inférieur à 6000 sont :"
-cryptos_below_6000.each { |name, price| puts "#{name}: #{price}" }
+cryptos_below_6000(crypto_hash).each { |name, price| puts "#{name}: #{price}" }
 
 most_expensive_below_6000 = most_expensive_below_6000(crypto_hash)
-puts "La devise la plus chère parmi celles dont le cours est inférieur à 6000 est #{most_expensive_below_6000[0]} avec un prix de #{most_expensive_below_6000[1]}."
+puts "La devise la plus chère parmi celles dont le cours est inférieur à 6000 est #{most_expensive_below_6000[:name]} avec un prix de #{most_expensive_below_6000[:price]}."
