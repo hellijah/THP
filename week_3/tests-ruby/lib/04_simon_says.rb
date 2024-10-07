@@ -1,8 +1,11 @@
 def echo(word)
-    return word
+  return word
 end
   
 def shout(word)
-    return word.upcase
+  return word.upcase
 end
 
+def repeat(word, times)
+  (word + ' ') * times
+end
