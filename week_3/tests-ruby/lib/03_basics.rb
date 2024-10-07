@@ -18,6 +18,6 @@ def array_42(arr)
   arr.include?(42)
 end
   
-def magic_array(arr)
-  
+def magic_array (array)
+  array.flatten.uniq.map { |item| item * 2 }.reject { |item| item % 3 == 0 }.sort
 end

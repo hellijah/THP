@@ -44,10 +44,8 @@ describe 'crazy stuff on arrays' do
   # - sorted
   # BONUS : You can do this in one line less than 55 chars
   it 'does crazy stuff on Arrays' do
-    # expect(magic_array([1, 2, 3, 4, 5, 6])).to eq([2, 4, 8, 10])
-    # expect(magic_array([1, [2 no more arrays in array)
-  # - sorted
-  # - with each, 3], 4, 5, 6, 23, 31, [1, 2, 3]])).to eq([2, 4, 8, 10, 46, 62])
-    # expect(magic_array([[32, 54], [48, 12], [21, [1, 2, [3]]], 7, 8])).to eq([2, 4, 14, 16, 64])
+    expect(magic_array([1, 2, 3, 4, 5, 6])).to eq([2, 4, 8, 10])
+    expect(magic_array([1, [2, 3], 4, 5, 6, 23, 31, [1, 2, 3]])).to eq([2, 4, 8, 10, 46, 62])
+    expect(magic_array([[32, 54], [48, 12], [21, [1, 2, [3]]], 7, 8])).to eq([2, 4, 14, 16, 64])
   end
 end
