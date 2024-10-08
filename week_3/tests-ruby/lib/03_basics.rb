@@ -14,6 +14,18 @@ def reverse_upcase_noLTA(str)
   str.reverse.upcase.delete('LTA')
 end
   
+# def reverse_upcase_noLTA(str)
+#   arr = []
+
+#   str.split(" ").each do |s|
+#       newString = s.sub('a', '').sub('l', '').sub('t', '')
+#       arr.push(newString.upcase)
+#   end
+
+#   return arr.join(" ").reverse
+# end
+# puts reverse_upcase_noLTA
+
 def array_42(arr)
   arr.include?(42)
 end

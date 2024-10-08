@@ -7,5 +7,5 @@ def shout(word)
 end
 
 def repeat(word, times)
-  (word + ' ') * times
+  (word + ' ') * (times - 1) + word
 end
