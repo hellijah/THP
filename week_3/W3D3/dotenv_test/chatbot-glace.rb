@@ -13,9 +13,9 @@ headers = {
 }
 
 data = {
-  "prompt" => "donne moi 5 goûts de glace",
+  "prompt" => "je suis 5 goûts de glace",
   "max_tokens" => 10,
-  "temperature" => 0.7,
+  "temperature" => 0.4,
   "model" => "babbage-002"
 }
 
