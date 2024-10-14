@@ -18,21 +18,25 @@ class Event
     @start_date + (@duration * 60) # convert duration in seconds
   end
 
-  def past?
+  def is_past?
     @start_date < Time.now
   end
 
-  def upcoming_in_30_minutes?
+  def is_future?
+    !is_past?
+  end
+
+  def is_soon?
     @start_date <= Time.now + 1800 && !past? # 1800 seconds = 30 minutes
   end
 
   # Méthode pour afficher l'événement
-  def display_event
+  def to_s
     puts "Titre : #{@title}"
     puts "Date de début : #{@start_date.strftime("%H:%M:%S %d/%m/%Y")}"
     puts "Durée : #{@duration} minutes"
-    puts "Invités : #{@attendees.join(', ')}"
     puts "Date de fin : #{end_date.strftime("%H:%M:%S %d/%m/%Y")}"
+    puts "Invités : #{@attendees.join(', ')}"
   end
 
 end
