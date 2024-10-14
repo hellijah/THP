@@ -1,4 +1,4 @@
-require "pry"
+# require "pry"
 
 class User
   attr_accessor :email, :age
