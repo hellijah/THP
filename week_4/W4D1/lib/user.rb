@@ -6,8 +6,8 @@ class User
   @@all_users = []
 
   def initialize(email_to_save, age_to_save)
-    @email = email_to_save
-    @age = age_to_save
+    @email = email_to_save.to_s
+    @age = age_to_save.to_i
     # @@user_count = @@user_count + 1
     @@all_users << self
   end
