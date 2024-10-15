@@ -53,12 +53,13 @@ while user.life_points > 0 && (player1.life_points > 0 || player2.life_points > 
   when "2"
     user.attacks(player2) if player2.life_points > 0
   else
+    # clean terminal
+    system("clear")
     puts "Choix invalide, réessaie."
   end
 
   # ennemi strike back
-  
-  if player1.life_points > 0 || player2.life_points > 0
+    if player1.life_points > 0 || player2.life_points > 0
     puts "\nLes autres joueurs t'attaquent !" 
     enemies.each do |enemy|
     enemy.attacks(user) if enemy.life_points > 0
@@ -68,6 +69,9 @@ while user.life_points > 0 && (player1.life_points > 0 || player2.life_points > 
   # waiting for key entry
   puts "\nAppuie sur Entrée pour continuer"
   gets.chomp
+
+  # clean terminal
+  system("clear")
 end
 
 puts "GAME OVER"
