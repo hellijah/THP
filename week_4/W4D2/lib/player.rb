@@ -2,9 +2,9 @@ class Player
   attr_accessor :name, :life_points
   # @@all_players = []
 
-  def initialize(name_to_save, life_points_to_save)
+  def initialize(name_to_save)
     @name = name_to_save
-    @life_points = life_points_to_save
+    @life_points = 10
     # @@all_players << self
   end
 
