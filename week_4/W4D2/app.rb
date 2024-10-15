@@ -4,8 +4,14 @@ Bundler.require
 require_relative 'lib/game'
 require_relative 'lib/player'
 
-player1 = Player.new("Josiane")
-player2 = Player.new("José")
+# change player name color
+def colored(text, color_code)
+  "\e[#{color_code}m#{text}\e[0m"
+end
+
+player1 = Player.new(colored("Josiane", 31))  # 31 for red
+player2 = Player.new(colored("José", 34))     # 34 for blue
+
 
 
 while player1.life_points > 0 && player2.life_points > 0
