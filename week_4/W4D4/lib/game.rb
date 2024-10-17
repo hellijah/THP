@@ -18,6 +18,7 @@ class Game
       turn
       if @board.victory?
         puts "#{@current_player.name} a gagné !"
+        @current_player.wins += 1
         @status = "fin"
       elsif @board.full?
         puts "Match nul !"
@@ -31,7 +32,7 @@ class Game
   def turn
     system "clear"
     @board.display_board
-    puts "#{@current_player.name}, à toi de jouer #{@current_player.symbol}. Choisis une case (ex: A1, B2) :"
+    puts "#{@current_player.name}, à toi de jouer #{@current_player.symbol}. Choisis une case (ex: A1, B2, C3) :"
     move = gets.chomp
     valid_move = @board.update_case(move, @current_player.symbol)
     turn unless valid_move
@@ -40,4 +41,11 @@ class Game
   def switch_player
     @current_player = @current_player == @players[0] ? @players[1] : @players[0]
   end
+
+  def display_score
+    puts "Score :"
+    puts "#{@players[0].name} : #{@players[0].wins} victoire(s)"
+    puts "#{@players[1].name} : #{@players[1].wins} victoire(s)"
+  end
+
 end
