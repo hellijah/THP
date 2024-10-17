@@ -19,14 +19,22 @@ class Board
     puts "C  #{@cases['C1'].value} | #{@cases['C2'].value} | #{@cases['C3'].value}"
   end
 
-  def update_case(position, symbol)
-    if @cases[position].value == " "
-      @cases[position].value = symbol
-      return true
-    else
-      puts "Case déjà occupée. Choisis une autre case."
-      return false
+  def play_turn(player)
+    loop do
+      puts "Veuillez choisir une case (A1 à C3) :"
+      choice = gets.chomp.upcase
+      if valid_choice?(choice)
+        success = @cases[choice].update_case(player.symbol)
+        break if success
+      else
+        puts "Saisie invalide. Choisis une case existante entre A1 et C3."
+      end
     end
+  end
+
+  def valid_choice?(choice)
+    # Vérifie si la case existe parmi les cases valides (A1 à C3)
+    @cases.keys.include?(choice)
   end
 
   def victory?

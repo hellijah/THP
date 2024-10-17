@@ -5,7 +5,7 @@ class Game
     name1 = gets.chomp
     puts "Entrez le nom du joueur 2 :"
     name2 = gets.chomp
-    @players = [Player.new(name1, "X"), Player.new(name2, "O")]
+    @players = [Player.new(name1, "X", :red), Player.new(name2, "O", :blue)]
     @current_player = @players[0]
     @status = "en cours"
   end
@@ -29,7 +29,7 @@ class Game
   def turn
     system "clear"
     @board.display_board
-    puts "#{@current_player.name}, à toi de jouer. Choisis une case (ex: A1, B2) :"
+    puts "#{@current_player.name}, à toi de jouer #{@current_player.symbol}. Choisis une case (ex: A1, B2) :"
     move = gets.chomp
     valid_move = @board.update_case(move, @current_player.symbol)
     turn unless valid_move
