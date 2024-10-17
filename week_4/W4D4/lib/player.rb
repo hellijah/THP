@@ -1,7 +1,7 @@
 require 'colorize'
 
 class Player
-  attr_reader :name, :symbol
+  attr_accessor :name, :symbol
 
   def initialize(name, symbol, color)
     @name = name.colorize(color)

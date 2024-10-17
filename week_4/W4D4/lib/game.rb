@@ -1,4 +1,6 @@
 class Game
+  attr_accessor :board, :players, :current_player, :status
+
   def initialize
     @board = Board.new
     puts "Entrez le nom du joueur 1 :"
