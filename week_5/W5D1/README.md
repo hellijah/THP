@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # THP Week 5 day 1
 
 Initiation au framework Sinatra et à l'architecture MVC Model-View-Controller
@@ -17,3 +18,6 @@ Initiation au framework Sinatra et à l'architecture MVC Model-View-Controller
         ├── index.erb  — Vue affichant tous les potins    
         ├── new_gossip.erb  — Formulaire pour créer un nouveau potin    
         └── show.erb  — Vue affichant les détails d'un potin spécifique    
+=======
+
+>>>>>>> ecab9d0c321fd2082c4c9548939217ed41c4effd
