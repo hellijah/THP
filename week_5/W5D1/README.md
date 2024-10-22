@@ -3,9 +3,8 @@
 Initiation au framework Sinatra et à l'architecture MVC Model-View-Controller
 
 
-### Arborescence du projet the_gossip_project_sinatra
-
-the_gossip_project_sinatra/    
+### Arborescence du projet
+ 
 ├── Gemfile    
 ├── Gemfile.lock    
 ├── config.ru    
