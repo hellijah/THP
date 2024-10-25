@@ -9,6 +9,15 @@
 #   end
 require 'faker'
 
+# rails db:drop db:create db:migrate
+
+# remove database
+PrivateMessage.destroy_all
+User.destroy_all
+City.destroy_all
+Gossip.destroy_all
+Tag.destroy_all
+
 # Create Cities
 10.times do
   City.create(name: Faker::Address.city, zip_code: Faker::Address.zip_code)
