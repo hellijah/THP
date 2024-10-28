@@ -22,7 +22,7 @@
 
   <div class="form-group">
     <%= form.label :user_id, "Auteur" %>
-    <%= form.select :user_id, Author.all.collect { |a| [a.first_name, a.id] }, { include_blank: true }, class: 'form-control' %>
+    <%= form.select :user_id, user.all.collect { |a| [a.first_name, a.id] }, { include_blank: true }, class: 'form-control' %>
   </div>
 
   <%= form.submit 'Créer le potin', class: 'btn btn-success' %>
