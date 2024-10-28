@@ -6,7 +6,7 @@
       <h2 class="card-title">
         <%= link_to gossip.title, gossip_path(gossip) %>
       </h2>
-      <p class="card-text">Auteur : <%= gossip.author.first_name %></p>
+      <p class="card-text">Auteur : <%= gossip.user.first_name %></p>
     </div>
   </div>
 <% end %>

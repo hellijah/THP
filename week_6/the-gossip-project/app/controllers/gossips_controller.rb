@@ -22,7 +22,8 @@ class GossipsController < ApplicationController
 
   private
 
-  def gossip_params
-    params.require(:gossip).permit(:title, :content, :author_id)
-  end
+  # chatGPT
+  # def gossip_params
+    # params.require(:gossip).permit(:title, :content)  # Remplacez par les attributs réels de votre modèle
+  # end
 end
