@@ -9,7 +9,8 @@ class StaticPagesController < ApplicationController
   end
 
   def welcome
-    # Action pour afficher une page de bienvenue personnalisée
+    # pour afficher une page de bienvenue custom
     @first_name = params[:first_name]
   end
+  
 end

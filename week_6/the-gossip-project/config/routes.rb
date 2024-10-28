@@ -6,15 +6,18 @@ Rails.application.routes.draw do
 
   # get '/welcome', to: 'static#index' 
 
-
   root 'static_pages#home'         # page d'accueil
+
+  # Routes pour les potins
+  resources :gossips
+
+  
   get '/team', to: 'static_pages#team'  # Page "team"
   get '/contact', to: 'static_pages#contact'  # Page "contact"
   
-  
-  # get '/welcome/:first_name', to: 'static#welcome'  # Page de bienvenue
-  # resources :gossips, only: [:show, :index]  # Routes pour les potins
-  # resources :users, only: [:show]  # Route pour afficher un utilisateur
+  get 'welcome/:first_name', to: 'static_pages#welcome', as: 'welcome'
+
+
 
 
 

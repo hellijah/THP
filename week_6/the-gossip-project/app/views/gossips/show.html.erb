@@ -1,0 +1,6 @@
+<h1><%= @gossip.title %></h1>
+<p><strong>Auteur :</strong> <%= @gossip.author.first_name %></p>
+<p><strong>Contenu :</strong> <%= @gossip.content %></p>
+<p><strong>Date de création :</strong> <%= @gossip.created_at.strftime("%d/%m/%Y %H:%M") %></p>
+
+<%= link_to 'Retour à la liste des potins', gossips_path, class: 'btn btn-secondary' %>
