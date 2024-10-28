@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/team', to: 'static_pages#team'  # Page "team"
   get '/contact', to: 'static_pages#contact'  # Page "contact"
   
+  
   get 'welcome/:first_name', to: 'static_pages#welcome', as: 'welcome'
 
 
