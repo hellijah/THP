@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'         # page d'accueil
 
+
+  # pour voir toutes les routes --> rails routes
   # Routes pour les potins
   resources :gossips
 
