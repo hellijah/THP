@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get "users/new"
+  get "users/create"
+  get "contacts/new"
+  get "contacts/create"
   get "static_pages/home"
   get "static_pages/team"
   get "static_pages/contact"
@@ -10,9 +14,17 @@ Rails.application.routes.draw do
 
 
   # pour voir toutes les routes --> rails routes
-  # Routes pour les potins
+  # Routes automatisée pour les potins
   resources :gossips
 
+  # Routes en manuel
+  # get "/gossips", to: "gossips#index"
+  # get "/gossips/:id", to: "gossips#show"
+  # get "/gossips/new", to: "gossips#new"
+  # post "/gossips", to: "gossips#create"  # reçoit de l'info d'un formulaire donc verbe POST
+  # get "/gossips/:id/edit", to: "gossips#edit"
+  # put "/gossips/:id", to: "gossips#update" # reçoit de l'info d'un formulaire donc verbe PUT
+  # delete "/gossips/:id", to: "gossips#destroy" # une requête un peu spéciale pour supprimer donc verbe DELETE
   
   get '/team', to: 'static_pages#team'  # Page "team"
   get '/contact', to: 'static_pages#contact'  # Page "contact"
