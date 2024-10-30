@@ -1,5 +1,5 @@
 class GossipsController < ApplicationController
-  attr_accessor :gossip
+  # attr_accessor :gossip
 
   # les 7 méthodes en REST 
 
