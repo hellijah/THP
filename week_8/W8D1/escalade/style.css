@@ -1,0 +1,84 @@
+/************************/
+/*      COULEURS        */
+/************************/
+
+:root {
+  --primary-color: #388E3C; /* Vert forêt */
+  --secondary-color: #FF7043; /* Orange énergique */
+  --dark-gray: #212121; /* Gris foncé */
+  --medium-gray: #757575; /* Gris moyen-clair */
+  --light-gray: #CFD8DC; /* Gris clair */
+  --warning-color: #FFEB3B; /* Jaune vif */
+  --danger-color: #D32F2F; /* Rouge sombre */
+  --success-color: #66BB6A; /* Vert clair */
+  --info-color: #29B6F6; /* Bleu ciel */
+}
+
+.color-swatch {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.primary { background-color: var(--primary-color); }
+.secondary { background-color: var(--secondary-color); }
+.dark { background-color: var(--dark-gray); }
+.medium-light { background-color: var(--medium-gray); }
+.light { background-color: var(--light-gray); }
+
+/************************/
+/*      TYPOGRAPHIE     */
+/************************/
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
+}
+
+/************************/
+/*      BOUTONS         */
+/************************/
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary { background-color: var(--primary-color); }
+.btn-info { background-color: var(--info-color); }
+
+/************************/
+/*      CARTES          */
+/************************/
+
+.card {
+  border: 1px solid var(--medium-gray);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+/* Styles spécifiques pour différents types de boutons */
+.btn-success {
+  background-color: var(--success-color);
+}

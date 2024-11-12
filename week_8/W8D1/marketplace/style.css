@@ -1,0 +1,98 @@
+/************************/
+/*      COULEURS        */
+/************************/
+
+:root {
+  --primary-color: #FFA726; /* Orange */
+  --secondary-color: #66BB6A; /* Vert */
+  --dark-gray: #424242;
+  --medium-gray: #BDBDBD;
+  --light-gray: #E0E0E0;
+  --warning-color: #FFB300;
+  --danger-color: #E53935;
+  --success-color: #43A047;
+  --info-color: #29B6F6;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.color-swatch {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.primary { background-color: var(--primary-color); }
+.secondary { background-color: var(--secondary-color); }
+.dark { background-color: var(--dark-gray); }
+.medium-light { background-color: var(--medium-gray); }
+.light { background-color: var(--light-gray); }
+
+/************************/
+/*      TYPOGRAPHIE     */
+/************************/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/************************/
+/*      BOUTONS         */
+/************************/
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary { background-color: var(--primary-color); }
+.btn-warning { background-color: var(--warning-color); }
+
+/************************/
+/*      CARTES          */
+/************************/
+
+.card {
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card .title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.card p {
+  padding: 0 10px;
+}
+
+.card .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid var(--light-gray);
+}

@@ -1,0 +1,75 @@
+/************************/
+/*      COULEURS        */
+/************************/
+
+:root {
+  --primary-color: #1A237E; /* Bleu foncé */
+  --secondary-color: #4CAF50; /* Vert olive */
+  --dark-gray: #263238;
+  --medium-gray: #B0BEC5;
+  --light-gray: #ECEFF1;
+  --warning-color: #FFB300; /* Jaune doré */
+  --danger-color: #C62828; /* Rouge profond */
+  --success-color: #2E7D32; /* Vert lumineux */
+  --info-color: #0288D1; /* Bleu léger */
+}
+
+.color-swatch {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.primary { background-color: var(--primary-color); }
+.secondary { background-color: var(--secondary-color); }
+.dark { background-color: var(--dark-gray); }
+.medium-light { background-color: var(--medium-gray); }
+.light { background-color: var(--light-gray); }
+
+/************************/
+/*      TYPOGRAPHIE     */
+/************************/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+}
+
+/************************/
+/*      BOUTONS         */
+/************************/
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary { background-color: var(--primary-color); }
+.btn-warning { background-color: var(--warning-color); }
+
+/************************/
+/*      CARTES          */
+/************************/
+
+.card {
+  border: 1px solid var(--medium-gray);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+}

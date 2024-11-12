@@ -1,0 +1,108 @@
+/************************/
+/*      COULEURS        */
+/************************/
+
+:root {
+  --primary-color: #4CAF50; /* Couleur principale */
+  --secondary-color: #FFC107; /* Couleur secondaire */
+  --dark-gray: #333333;
+  --medium-gray: #AAAAAA;
+  --light-gray: #EEEEEE;
+  --warning-color: #FF9800;
+  --danger-color: #F44336;
+  --success-color: #4CAF50;
+  --info-color: #2196F3;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+/************************/
+/*      TYPOGRAPHIE     */
+/************************/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, lead, blockquote, ul, ol, li {
+  font-family: 'Roboto', sans-serif;
+}
+
+/************************/
+/*      BOUTONS         */
+/************************/
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary { background-color: var(--primary-color); }
+.btn-warning { background-color: var(--warning-color); }
+.btn-danger { background-color: var(--danger-color); }
+.btn-info { background-color: var(--info-color); }
+.btn-success { background-color: var(--success-color); }
+
+.btn-outline {
+  background: none;
+  border: 1px solid currentColor;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+}
+
+.btn-lg {
+  padding: 15px 30px;
+}
+
+
+/************************/
+/*   FORMULAIRES        */
+/************************/
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid var(--medium-gray);
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+
+/************************/
+/*        CARTES        */
+/************************/
+
+.card {
+  border: 1px solid var(--light-gray);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.card .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
